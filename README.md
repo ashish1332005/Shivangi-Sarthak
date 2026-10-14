@@ -1,25 +1,24 @@
-# Alessia & Matteo · Lake Como Wedding 2027
+# Shivangi & Sarthak · Wedding Celebration 2026
 
-A romantic and elegant wedding invitation & RSVP website built for the shores of Lake Como, Italy.
+A wedding invitation and RSVP website for Shivangi and Sarthak's celebration in Pushkar, Rajasthan, on 11–12 November 2026.
 
 ## Features
-- **Cinematic Experience**: Background ambient video and sentimental waltz soundtrack.
-- **Rich Typography & Illustrations**: Handcrafted embroidery sketches, architectural illustrations, and bespoke serif/script typography.
-- **Interactive Timeline & Details**: Full schedule, itinerary, venue guide with direct Google Maps integration, accommodations, and dress code.
-- **RSVP Experience**: Dynamic RSVP modal with interactive form & celebratory confirmation.
 
-## Getting Started
+- Cinematic welcome with ambient video and music.
+- Wedding invitation featuring the Ganesh prayer and family details.
+- Event schedule, dress code, venue information, and travel guidance.
+- RSVP form with confirmation experience.
 
-### Prerequisites
-- Node.js (v16 or higher)
+## Run locally
 
-### Running Locally
+Requirements: Node.js 16 or later.
+
+From the project folder, run:
+
 ```bash
-# Start the local server
 npm start
-
-# Or using node directly
-node server.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Then open [http://localhost:3000](http://localhost:3000).
+
+You can also start the server directly with `node server.js`.
