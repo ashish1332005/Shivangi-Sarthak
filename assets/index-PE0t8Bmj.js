@@ -1246,29 +1246,29 @@ function W8(){
   const [pickup, setPickup] = m.useState("NO");
   const [submitted, setSubmitted] = m.useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!fullName.trim()) {
       alert("Please enter your Full Name");
       return;
     }
-    const msg = encodeURIComponent(
-      `*Wedding RSVP: Sarthak & Shivangi*
-` +
-      `Full Name: ${fullName}
-` +
-      `Contact: ${contact || 'N/A'}
-` +
-      `Will You Attend: ${attendance}
-` +
-      `Airport / Station Pickup: ${pickup}
-` +
-      `_Looking forward to celebrating at Pushkara Resort and Spa!_`
-    );
-    setSubmitted(true);
-    setTimeout(() => {
-      window.open(`https://wa.me/?text=${msg}`, '_blank');
-    }, 800);
+    try {
+      const response = await fetch("/api/rsvp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: fullName.trim(),
+          contact: contact.trim(),
+          attendance,
+          pickup
+        })
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || "RSVP could not be sent. Please try again.");
+      setSubmitted(true);
+    } catch (error) {
+      alert(error.message || "RSVP could not be sent. Please try again.");
+    }
   };
 
   return d.jsx("section", {
