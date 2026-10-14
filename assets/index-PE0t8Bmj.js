@@ -1463,7 +1463,7 @@ function H8({name1:e,name2:t,date:n,date2:r}){
     })
   })
 }
-const Dr={couple_name_1:"Sarthak",couple_name_2:"Shivangi",hero_name_1:"Shivangi",hero_name_2:"Sarthak",wedding_date:"2026-11-11",wedding_date_2:"2026-11-12",venue_name:"Pushkara Resort and Spa",venue_address:"Pushkar, Rajasthan"},Hi=()=>d.jsx("div",{className:"w-10 h-px bg-foreground/15 mx-auto"}),ButterflyVoyager=()=>{
+const Dr={couple_name_1:"Shivangi",couple_name_2:"Sarthak",hero_name_1:"Shivangi",hero_name_2:"Sarthak",wedding_date:"2026-11-11",wedding_date_2:"2026-11-12",venue_name:"Pushkara Resort and Spa",venue_address:"Pushkar, Rajasthan"},Hi=()=>d.jsx("div",{className:"w-10 h-px bg-foreground/15 mx-auto"}),ButterflyVoyager=()=>{
   m.useEffect(() => {
     let frame = 0;
     let x = 50, y = 13, targetX = x, targetY = y;
